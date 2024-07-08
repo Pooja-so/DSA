@@ -1,4 +1,3 @@
-package Step6_LinkedList.Doubly_LinkedList;
 import java.util.*;
 
 public class Doubly_LinkedList {

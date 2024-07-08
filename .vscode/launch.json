@@ -2,6 +2,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "FindPairsWithGivenSum",
+      "request": "launch",
+      "mainClass": "FindPairsWithGivenSum",
+      "projectName": "DSA_5ae8031"
+    },
+    {
+      "type": "java",
+      "name": "IntersectionPoint",
+      "request": "launch",
+      "mainClass": "IntersectionPoint",
+      "projectName": "DSA_5ae8031"
+    },
+    {
+      "type": "java",
+      "name": "DeleteOccurrencesOfKey",
+      "request": "launch",
+      "mainClass": "DeleteOccurrencesOfKey",
+      "projectName": "DSA_5ae8031"
+    },
+    {
+      "type": "java",
+      "name": "RemoveDuplicates",
+      "request": "launch",
+      "mainClass": "RemoveDuplicates",
+      "projectName": "DSA_5ae8031"
+    },
+    {
+      "type": "java",
+      "name": "Doubly_LinkedList",
+      "request": "launch",
+      "mainClass": "Step6_LinkedList.Learn2_Doubly_LinkedList.Doubly_LinkedList",
+      "projectName": "DSA_5ae8031"
+    },
+    {
+      "type": "java",
       "name": "AddOneToNumber",
       "request": "launch",
       "mainClass": "AddOneToNumber",
