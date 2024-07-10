@@ -15,7 +15,7 @@ public class PrefixToInfix {
             if((c>='a' && c<='z') || (c>='A' && c<='Z') || (c>='0' && c<='9')){
                 stack.push(String.valueOf(c));
             } 
-            // Case 2: If the scanned character is operator, Pop two operator from the stack build a string having operator in-between them and push the string onto the stack
+            // Case 2: If the scanned character is operator, Pop two operands from the stack build a string having operator in-between them and push the string onto the stack
             else {
                 String op1 = stack.pop();
                 String op2 = stack.pop();
