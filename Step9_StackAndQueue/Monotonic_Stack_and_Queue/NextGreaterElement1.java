@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class NextGreaterElement1 {
 
-    // Brute Force approach: Using loop
+    //* Solution 1: Brute Force approach: Using loop
     // Time Complexity: O(N^2)
     // Space Complexity: O(1)
     static int[] solution1(int arr[]){
@@ -25,33 +25,29 @@ public class NextGreaterElement1 {
         return ans;
     }
 
-    // Better approach: Using stack
+    //* Solution 2: Better approach: Using stack
     // Time Complexity: O(N)
     // Space Complexity: O(N), stack space
-    /*
-     Step1: Travserse the stack from right to left
-     Step2: Conditions
-     case 1: If top of the stack is greater then the current array element then store it as answer
-     case 2: If top of the stack is greater then the current array element then pop the element until we find any greater element at the top
-     Step 3: Push the element onto the stack
-     */
-
     static int[] solution2(int arr[]){
         Stack<Integer> stack = new Stack<Integer>();
         int n = arr.length;
         int[] ans = new int[n];
 
+        System.out.println("Solution 2: ");
+
+        // Step1: Traverse the array in reverse order i.e. from right to left
         for(int i=n-1; i>=0; i--){
-            ans[i]=-1;
-            // Case 1: If top element is less than or equal to the current element. i.e. the current elemnt is greater. Pop the stack until the condition holds 
+            // Step 2.1: Pop out all the smaller elements from the stack 
             while(!stack.isEmpty() && stack.peek() <= arr[i]){
                 stack.pop();
             }
-            // Case 2: If top element is greater than the current element.
-            if(stack.peek() > arr[i]){
+            // Step 2.2: After popping all the smaller elements if the stack is not empty then the element at the top will always be the element greater than the current array element else if the stack is empty that means there is no greater element on the right.
+            if(!stack.isEmpty()){
                 ans[i] = stack.peek();
+            }else{
+                ans[i]=-1;
             }
-            // Push the current element onto the stack
+            // Step 2.3: Push the current element onto the stack
             stack.push(arr[i]);
         }
 
@@ -67,7 +63,7 @@ public class NextGreaterElement1 {
     }
     public static void main(String[] args) {
         int arr[] = {4, 12, 5, 3, 1, 2, 5, 3, 1, 2, 4, 6};
-        int ans[] = solution1(arr);
+        int ans[] = solution2(arr);
         
         System.out.println("Next Greater element: ");
         printArray(arr);
